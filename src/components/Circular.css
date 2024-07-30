@@ -1,0 +1,83 @@
+.circularcontainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .circularbody{
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/26/14/25/banner-5223288_1280.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .noCirculars{
+    margin-left: 400px;
+  }
+  
+  .circularheading {
+    text-align: center;
+    color: #fafafb;
+    margin-bottom: 20px;
+  }
+  
+  .circularformContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .headingtextField {
+    margin-bottom: 15px;
+  }
+  
+  .bodytextField {
+    margin-bottom: 15px;
+  }
+
+  .createcircularButton {
+    align-self: flex-end;
+  }
+  
+  .circularCard {
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .circularCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .circularcardContent {
+    cursor: pointer;
+  }
+  
+  .circularcardHeading {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .circularcardBody {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .circularcardDate {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #777;
+  }
+  
+  .editButton {
+    color: #3f51b5;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  

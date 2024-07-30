@@ -1,0 +1,8 @@
+.entirebody-of-inside-app{
+    width: 211vh;
+    position: fixed;
+    z-index: 10000;
+    /* background-color: ; */
+    /* overflow: hidden; */
+    /* z-index: 1000; */
+}

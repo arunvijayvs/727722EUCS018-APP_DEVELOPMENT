@@ -1,0 +1,64 @@
+.footer-trigger {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .footer-info-icon {
+    font-size: 48px;
+  }
+  
+  .footer-modal {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .footer-backdrop {
+    background: transparent;
+  }
+  
+  .footer-content {
+    width: 100%;
+    max-width: 100%;
+    /* background-color: #fff; */
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/004/709/149/small/grey-white-abstract-background-geometry-shine-and-layer-element-for-presentation-design-suit-for-business-corporate-institution-party-festive-seminar-and-talks-vector.jpg");
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  .footer-icon {
+    margin-right: 10px;
+  }
+  
+  .footer-icon-button {
+    margin: 0 10px;
+  }
+  
+  .footer-icon-button:hover .footer-icon {
+    color: #0056b3;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  

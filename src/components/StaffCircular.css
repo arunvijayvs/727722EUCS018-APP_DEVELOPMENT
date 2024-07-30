@@ -1,0 +1,89 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+  }
+
+  .circularbody{
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/26/14/25/banner-5223288_1280.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .heading {
+    text-align: center;
+    color: #f8f8fb;
+    margin-bottom: 20px;
+  }
+  
+  .circularCard {
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .circularCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cardContent {
+    cursor: pointer;
+  }
+  
+  .cardHeading {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .cardBody {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  /* Existing CSS remains unchanged */
+
+.no-circulars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.no-circulars-icon {
+  font-size: 4rem; /* Adjust the size of the icon */
+  color: #3f51b5; /* Change the color if needed */
+  margin-bottom: 10px;
+}
+
+.no-circulars-message {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.dialog-content {
+  padding: 20px;
+}
+
+.dialog-date {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}

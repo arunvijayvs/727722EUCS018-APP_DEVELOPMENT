@@ -1,0 +1,73 @@
+.staffslistbody {
+  background-image: url("https://cdn.pixabay.com/photo/2015/03/30/12/37/cafe-698516_960_720.jpg");
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout {
+  display: flex;
+  height: 100%;
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+  border-right: 2px solid #ccc; /* Border to separate sections */
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.right-section {
+  flex: 2;
+  padding: 20px;
+  overflow-y: auto;
+  /* height: 100vh; */
+  margin-bottom: 50px;
+}
+
+.staff-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/004/709/149/small/grey-white-abstract-background-geometry-shine-and-layer-element-for-presentation-design-suit-for-business-corporate-institution-party-festive-seminar-and-talks-vector.jpg");
+  background-size: 500px;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /* Include padding in width and height */
+}
+
+.staff-avatar {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: 3px solid #9ba6e3;
+}
+
+.staff-card .MuiCardContent-root {
+  padding: 16px;
+}
+
+.staff-card .MuiTypography-body2 {
+  color: #333a3a;
+}
+
+.upload-section {
+  margin-top: 10px;
+}
+
+.upload-section input[type="file"] {
+  margin-bottom: 10px;
+}

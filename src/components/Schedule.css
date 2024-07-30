@@ -1,0 +1,112 @@
+/* Existing CSS remains unchanged */
+
+/* New styles for improved visual design */
+.schedulebody {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif; /* Apply a professional font */
+}
+
+h1 {
+  color: #a6a7a9;
+  font-family: 'Open Sans', sans-serif; /* Different font for headings */
+}
+
+.scheduleentire-page {
+  background-image: url("https://cdn.pixabay.com/photo/2019/04/01/12/48/time-4095294_1280.jpg");
+  background-size: 1500px;
+  background-attachment: fixed;
+  color: #333; /* Improved text color for better readability */
+}
+
+.date-picker-container {
+  width: 500px;
+  margin: 0px auto 20px; /* Centered with margin for spacing */
+  background-color: #ea6464; /* White background for better contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.date-picker-container h6 {
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif; /* Consistent font for headings */
+}
+
+.headblock{
+  padding: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.add-staff {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #ffffff; /* Background color for better contrast */
+  border-radius: 8px; /* Rounded corners */
+  padding: 5px; /* Padding for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.table {
+  background-color: #ffffff; /* White background for table */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.table .row.header {
+  background-color: #0e0f11;
+  color: white;
+  padding: 10px 0;
+  font-weight: bold; /* Bold header text */
+}
+
+.table .row {
+  padding: 4px 4px;
+  height: 60px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.table .block {
+  /* padding: 2px; */
+  /* flex: 1; */
+  padding: 4px 4px;
+  text-align: center;
+  word-wrap: break-word;
+  cursor: pointer;
+  overflow: hidden;
+  height: 60px;
+  background-color: #f9f9f9; /* Light background for table rows */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background color transition */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table .block:hover {
+  background-color: #e0e0e0; /* Highlight row on hover */
+}
+
+.delete-confirmation {
+  position: absolute;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 3000;
+}
+
+.dialog-content .MuiTextField-root {
+  margin-bottom: 16px;
+}

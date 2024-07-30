@@ -1,0 +1,116 @@
+{
+    "staffs": [
+      {
+        "id": "702a",
+        "firstname": "Balaji",
+        "lastname": "Sri",
+        "email": "balaji@gmail.com",
+        "phone": "8189815115",
+        "department": "Developer",
+        "password": "Balaji@2005"
+      },
+      {
+        "id": "cceb",
+        "firstname": "Arun ",
+        "lastname": "Vijay",
+        "email": "av@gmail.com",
+        "password": "Arun@2005",
+        "phone": "6381624210",
+        "department": "Information Technology"
+      },
+      {
+        "id": "3830",
+        "firstname": "Ashok",
+        "lastname": "Kanna",
+        "email": "ak@gmail.com",
+        "password": "Ashok@2005",
+        "phone": "8148140387",
+        "department": "Human Resources"
+      },
+      {
+        "id": "b661",
+        "firstname": "Hari",
+        "lastname": "Baskar",
+        "email": "hb@gmail.com",
+        "password": "Hari@2004",
+        "phone": "9363588283",
+        "department": "Operations"
+      },
+      {
+        "id": "8980",
+        "firstname": "Ashwin",
+        "lastname": "S",
+        "email": "ash@gmail.com",
+        "password": "Ash@2005",
+        "phone": "8489420883",
+        "department": "Human Resources"
+      },
+      {
+        "id": "647a",
+        "firstname": "Adhish",
+        "lastname": "R",
+        "email": "adhish@gmail.com",
+        "password": "Adhish@2004",
+        "phone": "9840820525",
+        "department": "Information Technology"
+      },
+      {
+        "id": "d651",
+        "firstname": "Agash",
+        "lastname": "K",
+        "email": "agash@gmail.com",
+        "password": "Agash@2004",
+        "phone": "8787878909",
+        "department": "Finance"
+      },
+      {
+        "id": "24a9",
+        "firstname": "Ashwin",
+        "lastname": "Vikram",
+        "email": "vikram@gmail.com",
+        "password": "Vikram@2004",
+        "phone": "7678765451",
+        "department": "Human Resources"
+      },
+      {
+        "id": "f1d2",
+        "firstname": "Nitin",
+        "lastname": "M",
+        "email": "nitin@gmail.com",
+        "password": "Nitin@2004",
+        "phone": "9871234543",
+        "department": "Information Technology"
+      },
+      {
+        "id": "9aae",
+        "firstname": "Dharanish",
+        "lastname": "M",
+        "email": "dhara@gmail.com",
+        "password": "Dhara@2004",
+        "phone": "6751677258",
+        "department": "Operations"
+      },
+      {
+        "id": "4031",
+        "firstname": "Deepak",
+        "lastname": "Leo",
+        "email": "leo@gmail.com",
+        "password": "Leo@2005",
+        "phone": "8675645387",
+        "department": "Finance"
+      },
+      {
+        "id": "0051",
+        "firstname": "Aswath",
+        "lastname": "S",
+        "email": "aswath@gmail.com",
+        "password": "Aswath@2004",
+        "phone": "7687652132",
+        "department": "Information Technology"
+      }
+    ],
+    "circular": [
+    ],
+    "jobs-alloted": [],
+    "requests": []
+  }
