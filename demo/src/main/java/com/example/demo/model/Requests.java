@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,7 +30,8 @@ public class Requests {
     private String task;
     private String description;
 
-    @JsonBackReference
-    @ManyToOne
-    private Staffs staff;
+    // @JsonBackReference
+    // @ManyToOne
+    // @JsonIgnore
+    // private Staffs staff;
 }

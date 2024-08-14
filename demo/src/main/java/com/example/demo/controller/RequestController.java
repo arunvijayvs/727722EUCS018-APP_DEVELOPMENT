@@ -24,7 +24,7 @@ public class RequestController {
     public RequestsService requestsService;
 
     @PostMapping("/post")
-    public String postRequestDetails(@RequestBody List<Requests> request) {
+    public String postRequestDetails(@RequestBody Requests request) {
         requestsService.postRequestDetails(request);
         return "Request Added";
     }

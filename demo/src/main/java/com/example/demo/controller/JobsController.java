@@ -8,6 +8,7 @@ import com.example.demo.service.JobsService;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -26,7 +27,7 @@ public class JobsController {
     public JobsService jobsService;
 
     @PostMapping("/post")
-    public String postTask(@RequestBody List<Jobs> jobs) {
+    public String postTask(@RequestBody Jobs jobs) {
         jobsService.postTask(jobs);
         return "Job Alloted";
     }
@@ -36,11 +37,17 @@ public class JobsController {
     {
         return jobsService.jobsdata(staffId);
     }
-
-    @DeleteMapping("/delete")
-    public void deletesjob(@RequestParam int id)
+    @GetMapping("/getbydate")
+    public List<Jobs> jobsdata(@RequestParam String date) 
     {
-        jobsService.deletejob(id);
+        return jobsService.jobsdatabydate(date);
+    }
+
+   @DeleteMapping("/delete")
+    public ResponseEntity<Void> deletesjob(@RequestParam String task, @RequestParam int staffId) 
+    {
+        jobsService.deletejob(task, staffId);
+        return ResponseEntity.noContent().build();
     }
     
 }

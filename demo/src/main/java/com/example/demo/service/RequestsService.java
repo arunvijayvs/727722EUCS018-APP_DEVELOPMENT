@@ -14,9 +14,9 @@ public class RequestsService {
     @Autowired
     public RequestsRepo requestRepo;
 
-    public List<Requests> postRequestDetails(List<Requests> request)
+    public Requests postRequestDetails(Requests request)
     {
-        return requestRepo.saveAll(request);
+        return requestRepo.save(request);
     }
 
     public List<Requests> getRequests()

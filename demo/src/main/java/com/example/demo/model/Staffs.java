@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -40,14 +41,14 @@ public class Staffs implements UserDetails
     private String department;
     private String password;
 
-    @JsonManagedReference
-    @OneToMany(mappedBy = "staff", cascade = CascadeType.ALL)
-    private List<Jobs> jobs;
+    // @JsonManagedReference
+    // @OneToMany(mappedBy = "staff", cascade = CascadeType.ALL,  fetch = FetchType.LAZY)
+    // private List<Jobs> jobs;
 
-    @OneToMany(mappedBy = "staff", cascade = CascadeType.ALL)
-    private List<Requests> requests;
+    // @OneToMany(mappedBy = "staff", cascade = CascadeType.ALL,  fetch = FetchType.LAZY)
+    // private List<Requests> requests;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private RefreshToken refreshToken;
 
     @Override
