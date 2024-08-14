@@ -4,7 +4,7 @@ import lo from '../img/lo.png';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Fpnav from './Fpnav';
-
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import s1 from '../img/s1.png';
 import s2 from '../img/s2.png';
 import s3 from '../img/s3.png';
@@ -40,37 +40,19 @@ const FirstPage = () => {
   return (
     <div className='bodyoffirstpage'>
         <Fpnav/>
-        <br></br>
-        <br></br>
-        <br></br>
+        
 
 
-    <section>
-      <div className="ban">
-
-        </div>
-
-    </section>
-
-    <section>
-      <div>
-        <h1 className='ban-headline'>Customize and extend your frontline
-          platform <br></br>with workforce management system.
-        </h1>
+        <div id='homepgtop'>
+      <article>
+        <img src='https://img.freepik.com/free-photo/conception-success-group-young-freelancers-office-have-conversation-smiling_146671-13611.jpg?t=st=1723523876~exp=1723527476~hmac=73e0221bf44ad9e88e777c5a36c22b58765b1edb9af7277f3eb743238a47057d&w=1060' id='topimg'></img>
+      <h1 id='overtext'>ManageMate</h1>
+      <h2 id='overtext'>Get everyone working in a single platform designed to manage any type of work. </h2>
+      <button type='submit' onClick={() => navigate('/register')}><b>Register</b></button>
+    </article>
+    
       </div>
-      <br/>
-      <div className='learn'>
-       
-         <h8 className='headline2'>Increase your organisation's performance with solutions that support frontline workers from shift scheduling to communication.</h8>
-         <br/>
-        <div id='lea'>
-          <button type='button' className='learn-more'>Learn More</button>
-          <button type='button' className='learn-more2' onClick={()=> navigate('/role')}>Get Started</button>
-        </div>
-       
-
-      </div>
-    </section>
+<br/><br/><br/>
    <section>
     <div>
       <h2 className='headline3'>Give your managers and workers the<br/> staff scheduling tools they need</h2>
@@ -136,7 +118,7 @@ const FirstPage = () => {
       
     <div className='send'>
       
-      <button>Register</button>
+      <button  onClick={() => navigate('/register')}>Register</button>
     </div>
 
     <div id='row'>

@@ -15,6 +15,7 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
+    "reviewproject": "file:",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -22,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:json-server":"json-server --watch db.json --port 8080"
+    "start:json-server": "json-server --watch db.json --port 8080"
   },
   "eslintConfig": {
     "extends": [

@@ -82,7 +82,7 @@ function ResponsiveAppBar() {
 
   return (
     <div className='entirebody-of-inside-app'>
-      <AppBar position="static" className='navbartop' sx={{ backgroundColor: 'gainsboro', color: 'black' }}>
+      <AppBar position="static" className='navbartop' sx={{ backdropFilter:30,border:2, color: 'black' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <PendingActionsIcon

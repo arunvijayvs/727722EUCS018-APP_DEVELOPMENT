@@ -1,89 +1,404 @@
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Roboto', sans-serif;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-  }
-
-  .circularbody{
-    background-image: url("https://cdn.pixabay.com/photo/2020/05/26/14/25/banner-5223288_1280.jpg");
-    height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
-  .heading {
-    text-align: center;
-    color: #f8f8fb;
-    margin-bottom: 20px;
-  }
-  
-  .circularCard {
-    margin: 10px 0;
-    transition: transform 0.3s ease;
-  }
-  
-  .circularCard:hover {
-    transform: translateY(-5px);
-  }
-  
-  .cardContent {
-    cursor: pointer;
-  }
-  
-  .cardHeading {
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  .cardBody {
-    margin-top: 10px;
-    font-size: 1em;
-    color: #333;
-  }
-  
-  @media (max-width: 600px) {
-    .container {
-      padding: 10px;
-    }
-  }
-  
-  /* Existing CSS remains unchanged */
-
-.no-circulars {
+/* 
+.circularinside{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  background-color: #3f51b5;
+}
+
+.circularbody {
+  background: #4776E6;
+  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+  background: linear-gradient(to right, #8E54E9, #4776E6);
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  padding-top: 60px;
+}
+
+#picimg {
+  flex: 1;
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+#picimg img {
+  max-width: 100%;
+  height: auto;
+}
+
+.circularcontainer {
+  max-width: 600px;
   padding: 20px;
-  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  border: 5px solid #FBAB7E;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #2667a7;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin-left: 20px;
+}
+
+.circularheading {
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 500;
   text-align: center;
 }
 
-.no-circulars-icon {
-  font-size: 4rem; /* Adjust the size of the icon */
-  color: #3f51b5; /* Change the color if needed */
-  margin-bottom: 10px;
+.createcircularButton {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  background-color: #635bbd;
+  color: white;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-left: 50px;
 }
 
-.no-circulars-message {
-  margin: 0;
+.createcircularButton:hover {
+  background-color: #3f51b5;
+  transform: scale(1.05);
+  color: white;
+}
+
+.noCirculars {
+  text-align: center;
+  color: #fff;
+}
+
+.circularCard {
+  width: 100%;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circularCard:hover {
+  transform: translateY(-5px);
+}
+
+.circularcardContent {
+  cursor: pointer;
+  text-align: center;
+}
+
+.circularcardHeading {
+  font-weight: bold;
   font-size: 1.2em;
   color: #333;
 }
 
-.dialog-content {
+.circularcardDate {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #777;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .circularbody {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+  .circularcontainer {
+    margin-left: 0;
+  }
+
+  #picimg {
+    margin-bottom: 20px;
+  }
+} */
+
+
+/* Navbar sticky at the top */
+
+
+
+/* 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+Main body styling
+.circularbody {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #654343;
+  overflow: hidden; Prevent scrolling for the entire body
+}
+
+Inside container with flex for left and right division
+.circularinside {
+  background-color: red;
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+Left side with image
+#picimg {
+  margin-top: 150px;
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; Fix the image to the viewport
+  height: 100px; Full height of the viewport
+  width: 50%;
+  background-size: 200px;
+  background-color: #2667a7;
+  z-index: 1; Ensure it's on top of the background but below the right content
+}
+
+#picimg img {
+  max-width: 80%;
+  height: 325px;
+  width: 325px;
+  object-fit: contain;
+}
+
+Right side with scrollable content
+.circularcontainer {
+  flex: 1;
+  margin-left: 50%;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  border: 5px solid #FBAB7E;
+  border-radius: 8px;
+  margin-left: 700px;
+  background-color: #2667a7;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  height: fit-content; Full height of the viewport
+  z-index: 2; Ensure it's above the left side
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+
+
+
+}
+
+.circularheading {
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+Button styling
+.createcircularButton {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  background-color: #635bbd;
+  color: white;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-left: 100px;
+  align-items: center;
+  display: flex;
+justify-content: center;
+}
+
+.createcircularButton:hover {
+  background-color: #3f51b5;
+  transform: scale(1.05);
+  color: white;
+}
+
+.noCirculars {
+  text-align: center;
+  color: #fff;
+}
+
+Card styling
+.circularCard {
+  width: 100%;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circularCard:hover {
+  transform: translateY(-5px);
+}
+
+.circularcardContent {
+  cursor: pointer;
+  text-align: center;
+}
+
+.circularcardHeading {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.circularcardDate {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #777;
+  text-align: center;
+}
+
+Responsive adjustments
+@media (max-width: 600px) {
+  .circularbody {
+    flex-direction: column;
+  }
+
+  #picimg {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .circularcontainer {
+    margin-left: 0;
+    width: 100%;
+  }
+} */
+
+
+
+
+
+
+/* StaffCircular.css */
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Kalnia+Glaze:wdth,wght@102.2,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Martel:wght@400;600&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Kalnia+Glaze:wdth,wght@102.2,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Martel:wght@400;600&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Kalnia+Glaze:wdth,wght@102.2,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Martel:wght@400;600&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
+.acircularbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  margin: 0;
+  /* width: 100%; */
+  background-image: url('https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+
+
+#na
+{
+  width: 100%;
+}
+
+
+.acontainer {
+  margin-left: 5px;
+  width: 40%;
+  background-color: gray;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  /* margin-top: 100px; To create some space below the navbar */
+  /* font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto; */
+}
+
+.acontainer h4{
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+}
+.aheading {
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.acircularCard {
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid black;
+}
+
+.acircularCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.acardContent {
   padding: 20px;
 }
 
-.dialog-date {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #666;
+.acardHeading {
+  font-weight: 600;
+  color: #0056b3;
+}
+
+.acardDate {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.ano-circulars {
+  text-align: center;
+  margin-top: 50px;
+  color: #888;
+}
+
+.ano-circulars-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.ano-circulars-message {
+  font-size: 20px;
+  color: white;
+}
+
+
+.acircularContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.acardHeading {
+  font-weight: 600;
+  color: #0056b3;
+}
+
+.arrowIcon {
+  margin-left: 0px;
+  font-size: 1.5rem;
+  color: #0056b3;
 }

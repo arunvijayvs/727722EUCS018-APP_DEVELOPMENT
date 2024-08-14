@@ -27,7 +27,7 @@ import './Navbar.css';
 const pages = ['Circular', 'Alloted Jobs', 'Help'];
 const settings = ['Profile', 'Logout'];
 
-function ResponsiveAppBar() {
+function StaffNavbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [openFooter, setOpenFooter] = useState(false);
@@ -257,4 +257,4 @@ function ResponsiveAppBar() {
   );
 }
 
-export default ResponsiveAppBar;
+export default StaffNavbar;

@@ -23,19 +23,19 @@ function LandingPage() {
       <div className='landingleft'>
       <h1>Welcome to Managemate!</h1>
       <p>Your Ultimate solution for Staff Scheduling.</p>
-      <hr></hr>
-      <h4>Choose your role and start managing your Schedule efficiently.</h4>
+      {/* <hr></hr> */}
+      <h4>Choose your role and start managing your Schedule effectively.</h4>
       <br></br>
       <div className="rolecontainer">
         <h3>Select Role:</h3>
         <div className="roleoptions">
-          <div
+          <div id='roles'
             className={`roleoption ${role === 'Staff' ? 'selected' : ''}`}
             onClick={() => handleRoleChange('Staff')}
           >
             Staff
           </div>
-          <div
+          <div id='roles'
             className={`roleoption ${role === 'Admin' ? 'selected' : ''}`}
             onClick={() => handleRoleChange('Admin')}
           >
@@ -43,7 +43,7 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      
+      <br></br>
       <button 
         className="startbutton" 
         onClick={handleStartClick}

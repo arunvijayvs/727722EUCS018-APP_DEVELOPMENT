@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .allotedjobsbody{
-    background-image: url("https://cdn.pixabay.com/photo/2019/04/01/12/48/time-4095294_1280.jpg");
-    height: 100vh;
+  background-image: url("https://img.freepik.com/free-psd/simple-product-backdrop-mockup-psd-with-shadow_53876-141762.jpg?w=1060&t=st=1723468073~exp=1723468673~hmac=8946116fc98b08c080cf772573237d70007a85c1fd675a58ba1d85736995671d");
+  height: 150vh;
     background-size: cover;
     background-attachment: fixed;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
   }

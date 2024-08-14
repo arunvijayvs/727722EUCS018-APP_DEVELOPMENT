@@ -1,83 +1,100 @@
-.circularcontainer {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Roboto', sans-serif;
-  }
+.circularbody {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://images.pexels.com/photos/7078392/pexels-photo-7078392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  min-height: 100vh; /* Ensures the background covers the entire viewport height */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
 
-  .circularbody{
-    background-image: url("https://cdn.pixabay.com/photo/2020/05/26/14/25/banner-5223288_1280.jpg");
-    height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-  }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #1976d2; /* Navbar background color */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
 
-  .noCirculars{
-    margin-left: 400px;
-  }
-  
-  .circularheading {
-    text-align: center;
-    color: #fafafb;
-    margin-bottom: 20px;
-  }
-  
-  .circularformContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-  
-  .headingtextField {
-    margin-bottom: 15px;
-  }
-  
-  .bodytextField {
-    margin-bottom: 15px;
-  }
+.circularinside {
+  padding-top: 20px; /* Space for the sticky navbar */
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  /* align-items: center; */
+}
 
-  .createcircularButton {
-    align-self: flex-end;
-  }
-  
-  .circularCard {
-    margin: 10px 0;
-    transition: transform 0.3s ease;
-  }
-  
-  .circularCard:hover {
-    transform: translateY(-5px);
-  }
-  
-  .circularcardContent {
-    cursor: pointer;
-  }
-  
-  .circularcardHeading {
-    font-weight: bold;
-    font-size: 1.2em;
-  }
-  
-  .circularcardBody {
-    margin-top: 10px;
-    font-size: 1em;
-    color: #333;
-  }
-  
-  .circularcardDate {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #777;
-  }
-  
-  .editButton {
-    color: #3f51b5;
-  }
-  
-  @media (max-width: 600px) {
-    .container {
-      padding: 10px;
-    }
-  }
-  
+.circularcontainer 
+{
+  width: 50%;
+  height: fit-content; /* Reduces the height of the container */
+  overflow-y: auto; /* Allows scrolling if content exceeds container height */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circularheading {
+  text-align: center;
+  font-weight: bold;
+  color: navy;
+}
+
+.createcircularButton {
+
+  background-color: #1976d2;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.createcircularButton:hover {
+  background-color: #1565c0; /* Slightly darker blue on hover */
+}
+
+.circularCard {
+  /* margin: 10px 0; */
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 1px solid black;
+  margin-bottom: 15px;
+
+}
+
+.circularCard:hover {
+  transform: scale(1.02);
+}
+
+.circularcardContent {
+  padding: 20px;
+
+}
+
+.circularcardHeading {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.circularcardDate {
+  font-size: 14px;
+  color: #666;
+}
+
+.noCirculars {
+  text-align: center;
+}

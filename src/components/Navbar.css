@@ -1,8 +1,68 @@
-.entirebody-of-inside-app{
-    width: 211vh;
+/* Navbar Component Styles */
+.entirebody-of-inside-app .radio-inputs 
+{backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227,228,237,0.37);
+  border: 2;
     position: fixed;
-    z-index: 10000;
-    /* background-color: ; */
-    /* overflow: hidden; */
-    /* z-index: 1000; */
-}
+    display: flex;
+    border-radius: 0.5rem;
+    background-color: #70c489;
+    box-sizing: border-box;
+    font-size: 14px;
+    width: 90%;
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  .entirebody-of-inside-app .radio-inputs .radio input {
+    display: none;
+  }
+  
+  .entirebody-of-inside-app .radio-inputs .radio .name {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    color: #000; /* Add a color here, it was missing */
+    transition: all 0.15s ease-in-out;
+    position: fixed;
+  }
+  
+  .entirebody-of-inside-app .radio-inputs .radio input:checked + .name {
+    background-color: #e8e8e8;
+    font-weight: 600;
+  }
+  
+  .entirebody-of-inside-app .radio-inputs .radio .name:hover {
+    color: #fff;
+  }
+  
+  .entirebody-of-inside-app .radio-inputs .radio input:checked + .name:hover {
+    color: #1d1d29;
+  }
+  
+  .entirebody-of-inside-app .radio-inputs .radio input:checked + .name::after,
+  .entirebody-of-inside-app .radio-inputs .radio input:checked + .name::before {
+    content: "";
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #70c489;
+    bottom: 0;
+  }
+  
+  .entirebody-of-inside-app .radio-inputs .radio input:checked + .name::after {
+    right: -10px;
+    border-bottom-left-radius: 300px;
+    box-shadow: -3px 3px 0px 3px #e8e8e8;
+  }
+  
+  .entirebody-of-inside-app .radio-inputs .radio input:checked + .name::before {
+    left: -10px;
+    border-bottom-right-radius: 300px;
+    box-shadow: 3px 3px 0px 3px #e8e8e8;
+  }
+  

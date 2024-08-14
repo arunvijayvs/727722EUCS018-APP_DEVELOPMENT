@@ -1,30 +1,46 @@
 /* Existing CSS remains unchanged */
 
 /* New styles for improved visual design */
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .schedulebody {
   padding: 20px;
   max-width: 1200px;
   margin: auto;
   color: #ffffff;
   font-family: 'Roboto', sans-serif; /* Apply a professional font */
+  /* background-image: url("https://img.freepik.com/free-psd/simple-product-backdrop-mockup-psd-with-shadow_53876-141762.jpg?w=1060&t=st=1723468073~exp=1723468673~hmac=8946116fc98b08c080cf772573237d70007a85c1fd675a58ba1d85736995671d"); */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
 
 h1 {
-  color: #a6a7a9;
-  font-family: 'Open Sans', sans-serif; /* Different font for headings */
+  color: #ffffff;
 }
 
 .scheduleentire-page {
-  background-image: url("https://cdn.pixabay.com/photo/2019/04/01/12/48/time-4095294_1280.jpg");
-  background-size: 1500px;
-  background-attachment: fixed;
-  color: #333; /* Improved text color for better readability */
+
+  
+background-image: url("https://img.freepik.com/free-psd/simple-product-backdrop-mockup-psd-with-shadow_53876-141762.jpg?w=1060&t=st=1723468073~exp=1723468673~hmac=8946116fc98b08c080cf772573237d70007a85c1fd675a58ba1d85736995671d");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: #333; /* Improved text color for better readability */
+    position: relative; /* Ensure content is positioned relative to the background */
+    z-index: 1;
+    padding: 20px; /* Add some padding if necessary */
+}
+
+.fixedtopschedule p
+{
+  font-size: 20px;
 }
 
 .date-picker-container {
   width: 500px;
   margin: 0px auto 20px; /* Centered with margin for spacing */
-  background-color: #ea6464; /* White background for better contrast */
+  background-color: #ffffff; /* White background for better contrast */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }

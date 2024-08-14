@@ -1,8 +1,8 @@
-#LoginBody {
+/* #LoginBody {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
-    /* background-color: #f9f9f9; */
+    background-color: #f9f9f9;
     margin: 0;
     padding: 50px 0;
     height: 100vh;
@@ -30,7 +30,7 @@
 }
 
 .LoginContainer {
-    background-image: url("https://img.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg");
+    background-image: url("https:    //img.freepik.com/free-vector/white-abstract-background_23-2148806276.jpg");
     background-size: cover;
     padding: 30px;
     border-radius: 40px;
@@ -86,6 +86,144 @@
     text-align: center;
     color: #666666;
     margin-top: 20px;
+}
+
+.LoginContainer h4 a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.LoginContainer h4 a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: -10px;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+#LoginBody {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0;
+    /* padding: 20px 0; */
+    height: 100vh;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgb(5,128,133);
+    background: linear-gradient(90deg, rgba(5,128,133,1) 0%, rgba(11,47,116,1) 100%);
+}
+
+.loginleft{
+    width: 45%;
+    height: 700px;
+    margin-left: 100px;
+    background-repeat: no-repeat;
+    background-size: 600px;
+    position: fixed;
+    background-image: url('');
+}
+
+.LoginContainer {
+    padding-top: 2px;
+    padding: 10px;
+    border-radius: 40px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 35%;
+    max-width: 650px;
+    height: 70%; /* Reduced height */
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content to the center vertically */
+    align-items: center; /* Align content to the center horizontally */
+}
+
+#LoginTitle {
+    font-family: 'Abel', sans-serif;
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.LoginContainer hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 10px;
+}
+
+.LoginContainer form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.LoginContainer .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+}
+
+.LoginContainer .form-row > div {
+    flex: 1;
+}
+
+.LoginContainer .MuiTextField-root,
+.LoginContainer .MuiFormControl-root {
+    margin-bottom: 12px; 
+    width: 100%;
+}
+
+.LoginContainer button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    background-color: #635bbd;
+    color: white;
+}
+
+.LoginContainer button:hover {
+    background-color: #000000;
+    transform: scale(1.02);
+    color: white;
+}
+
+.LoginContainer button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.LoginContainer h4 {
+    text-align: center;
+    color: #666666;
+    margin-top:10px;
 }
 
 .LoginContainer h4 a {

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Typography, Card, CardContent, Paper, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
-import { Info } from '@mui/icons-material'; // Import the Info icon
-import Navbar from './StaffNavbar'; // Adjust the import path as needed
+import { Typography, Card, CardContent, Dialog, DialogTitle, DialogContent, DialogActions, Button } from '@mui/material';
+import { Info } from '@mui/icons-material';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight'; // Import the ArrowCircleRight icon
+import Navbar from './StaffNavbar';
 import './StaffCircular.css';
 
 const StaffCircular = () => {
   const [circulars, setCirculars] = useState([]);
-  const [selectedCircular, setSelectedCircular] = useState(null);
   const [dialogOpen, setDialogOpen] = useState(false);
   const [currentCircular, setCurrentCircular] = useState(null);
 
@@ -36,38 +36,43 @@ const StaffCircular = () => {
   };
 
   return (
-    <div className='circularbody'>
-      <Navbar />
-      <br /><br /><br /><br /><br />
-      <div elevation={3} className="container">
-        <Typography variant="h4" className="heading">Circulars</Typography>
+    <div className='acircularbody'>
+      <div id='na'>
+        <Navbar />
+      </div>
+      <br /><br /><br />
+      <div elevation={3} className="acontainer">
+        <Typography variant="h4" className="aheading">Announcements</Typography>
         <hr />
-        <br /><br />
+       
         {circulars.length === 0 ? (
-  <div className="no-circulars">
-    <Info className="no-circulars-icon" />
-    <Typography variant="body1" className="no-circulars-message">
-      No circulars are found to show.
-    </Typography>
-  </div>
-) : (
-  <div>
-    {circulars.slice().reverse().map((circular) => (
-      <Card key={circular.id} className="circularCard">
-        <CardContent className="cardContent" onClick={() => handleCardClick(circular)}>
-          <Typography variant="h6" className="cardHeading">{circular.heading}</Typography>
-        </CardContent>
-      </Card>
-    ))}
-  </div>
-)}
+          <div className="ano-circulars">
+            <Info className="ano-circulars-icon" />
+            <Typography variant="body1" className="ano-circulars-message">
+              No circulars are found to show.
+            </Typography>
+          </div>
+        ) : (
+          <div>
+            {circulars.slice().reverse().map((circular) => (
+              <Card key={circular.id} className="acircularCard">
+                <CardContent className="acardContent" onClick={() => handleCardClick(circular)}>
+                  <div className="acircularContent">
+                    <Typography variant="h6" className="acardHeading">{circular.heading}</Typography>
+                    <ArrowCircleRightIcon className="arrowIcon" />
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
       </div>
 
       <Dialog open={dialogOpen} onClose={handleCloseDialog} maxWidth="md" fullWidth>
         <DialogTitle>{currentCircular?.heading || 'Circular Details'}</DialogTitle>
         <DialogContent>
           <Typography variant="body1">{currentCircular?.body || 'No details available.'}</Typography>
-          <Typography color="textSecondary" className="cardDate">Uploaded on: {currentCircular?.date}</Typography>
+          <Typography color="textSecondary" className="acardDate">Uploaded on: {currentCircular?.date}</Typography>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDialog} color="primary">Close</Button>

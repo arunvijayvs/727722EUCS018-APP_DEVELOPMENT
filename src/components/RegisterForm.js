@@ -19,11 +19,11 @@ const departments = [
 
 const RegisterForm = () => {
   const [email, setEmail] = useState('');
-  const [firstname, setFirstname] = useState('');
-  const [lastname, setLastname] = useState('');
+  const [firstName, setFirstname] = useState('');
+  const [lastName, setLastname] = useState('');
   const [password, setPassword] = useState('');
   const [confirmpass, setConfirm] = useState('');
-  const [phone, setPhone] = useState('');
+  const [phoneNo, setPhone] = useState('');
   const [department, setDepartment] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -44,8 +44,8 @@ const RegisterForm = () => {
     return emailRegex.test(email);
   };
 
-  const validatePhone = (phone) => {
-    return phone.length === 10 && /^\d+$/.test(phone);
+  const validatePhone = (phoneNo) => {
+    return phoneNo.length === 10 && /^\d+$/.test(phoneNo);
   };
 
   const handleSubmit = (event) => {
@@ -59,7 +59,7 @@ const RegisterForm = () => {
       setEmailError('');
     }
 
-    if (!validatePhone(phone)) {
+    if (!validatePhone(phoneNo)) {
       setPhoneError('Phone number must be 10 digits');
       return;
     } else {
@@ -74,19 +74,19 @@ const RegisterForm = () => {
     }
 
     const userdata = {
-      firstname: firstname,
-      lastname: lastname,
+      firstName: firstName,
+      lastName: lastName,
       email: email,
       password: password,
-      phone: phone,
+      phoneNo: phoneNo,
       department: department,
     };
 
     console.log("UserData: ", userdata);
 
-    axios.post('http://localhost:8080/staffs', userdata)
+    axios.post('http://localhost:8080/api/users/register', userdata)
       .then(res => {
-        console.log(res.data);
+        console.log("added",res.data);
         navigate('/login');
       })
       .catch(error => {
@@ -106,20 +106,20 @@ const RegisterForm = () => {
           <div className="form-row">
             <div>
               <TextField
-                id="firstname"
+                id="firstName"
                 label="First Name"
                 variant="outlined"
-                value={firstname}
+                value={firstName}
                 onChange={(e) => setFirstname(e.target.value)}
                 required
               />
             </div>
             <div>
               <TextField
-                id="lastname"
+                id="lastName"
                 label="Last Name"
                 variant="outlined"
-                value={lastname}
+                value={lastName}
                 onChange={(e) => setLastname(e.target.value)}
                 required
               />
@@ -140,11 +140,11 @@ const RegisterForm = () => {
           </div>
           <div>
             <TextField
-              id="phone"
+              id="phoneNo"
               label="Phone Number"
               variant="outlined"
               type="tel"
-              value={phone}
+              value={phoneNo}
               onChange={(e) => setPhone(e.target.value)}
               required
               error={!!phoneError}

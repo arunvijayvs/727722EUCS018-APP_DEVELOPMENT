@@ -15,20 +15,10 @@ const LoginForm = () => {
         event.preventDefault();
         
         try {
-            const response = await axios.get('http://localhost:8080/staffs');
-            const users = response.data;
-            console.log("Fetched Users: ", users); 
-
-            const user = users.find(
-                (user) => user.email === email && user.password === password
-            );
-            console.log("Matched User: ", user); 
-
-            if (user) {
-                navigate('/staffdash'); 
-            } else {
-                setError('Invalid email or password');
-            }
+            const response = await axios.post('http://localhost:8080/api/users/login',{ email, password });
+            navigate('/staffdash');
+            setEmail('');
+            setPassword('');
         } catch (error) {
             setError('An error occurred. Please try again.');
             console.error("Error fetching users: ", error); 
